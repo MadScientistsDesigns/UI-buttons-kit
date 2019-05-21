@@ -10,9 +10,11 @@
 body {
     background-color: rgb(211, 208, 208);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
+/* container */
 .container {
     background-color: #999;
     background-image: linear-gradient(rgb(194, 192, 192),#999);
@@ -43,9 +45,10 @@ h1, h2, h4{
     color: #444;
 }
 
-/* h4 {
-    color: #444;
-} */
+h1,h2 {
+    text-shadow: 1px 1px #888;
+}
+/* end container */
 
 
 /* ripple effect */
@@ -119,6 +122,7 @@ button:focus {
   }
 /* end pressed effect */
 
+/* default colors */
 .defaultColors {
     flex-direction: column;
 	align-items: center;
@@ -204,4 +208,61 @@ button:focus {
     font-size: 12px;
     padding: 4px 12px;
 }
+/* end default colors */
 
+/* inspiration */
+.inspiration {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px #555;
+    padding: 20px;
+    width: 58%;
+    background: rgb(219, 218, 218);
+}
+.inspiration a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.inspiration li {
+    padding-bottom: 10px;
+}
+/* end inspiration */
+
+/* responsive design for smaller screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        height: 800px;
+    }
+
+    .inspiration {
+        width: 70vw;;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        height: 1000px;
+    }
+
+    .inspiration {
+        width: 100vw;;
+    }
+}
+/* end responsive design for smaller screens */
+
+@media only screen and (min-width: 1459px) {
+    body {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .inspiration {
+        width: 50vw;;
+        margin: 20px;
+    }
+}
